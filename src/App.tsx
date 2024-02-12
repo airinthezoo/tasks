@@ -8,6 +8,7 @@ function App(): JSX.Element {
                 UD CISC275 with React Hooks and TypeScript
             </header>
             <p>Name: Aaron Xue</p>
+            <body>Hello World!</body>
         </div>
     );
 }
