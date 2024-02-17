@@ -48,12 +48,7 @@ export function isQuestion(message: string): boolean {
  */
 export function convertYesNo(word: string): boolean | null {
     const lowerCaseWord = word.toLowerCase();
-    switch (lowerCaseWord) {
-        case "yes":
-            return true;
-        case "no":
-            return false;
-        default:
-            return null;
-    }
+    if (lowerCaseWord === "yes") return true;
+    if (lowerCaseWord === "no") return false;
+    return null;
 }
