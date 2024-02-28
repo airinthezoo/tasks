@@ -63,7 +63,6 @@ export function toShortForm(question: Question): string {
     const idString = String(question.id);
     const nameString = question.name.substring(0, 10);
     return idString + ": " + nameString;
-    return "";
 }
 
 /**
