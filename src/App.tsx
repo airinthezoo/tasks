@@ -25,8 +25,9 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
+            <h1>This is a header!</h1>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
@@ -45,8 +46,7 @@ function App(): JSX.Element {
             <ChangeType></ChangeType>
             <hr />
             <CycleHoliday></CycleHoliday>
-            <h1>This is a header!</h1>
-            <body>Hello World!</body>
+            <div>Hello World!</div>
             <Container>
                 <Row>
                     <Col>
