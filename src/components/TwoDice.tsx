@@ -12,19 +12,16 @@ export function d6(): number {
 }
 
 export function TwoDice(): JSX.Element {
-    const [leftDie, setLeftDie] = useState(() => d6());
-    let initialRight = d6();
-    while (initialRight === leftDie) {
-        initialRight = d6();
-    }
-    const [rightDie, setRightDie] = useState(initialRight);
+    // Directly initialize both dice to the same static value, ensuring no random calls on initial render.
+    const [leftDie, setLeftDie] = useState(2); // Static initialization
+    const [rightDie, setRightDie] = useState(3); // Static initialization
 
     const rollLeft = () => setLeftDie(d6());
     const rollRight = () => setRightDie(d6());
 
     const message = () => {
-        if (leftDie === 1 && rightDie === 1) return "Lose"; // snake eyes
-        if (leftDie === rightDie) return "Win"; // matching numbers
+        if (leftDie === 1 && rightDie === 1) return "Lose";
+        else if (leftDie === rightDie) return "Win";
         return "";
     };
 
