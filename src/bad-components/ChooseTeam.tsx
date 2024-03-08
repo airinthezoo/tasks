@@ -14,18 +14,14 @@ export function ChooseTeam(): JSX.Element {
     const [team, setTeam] = useState<string[]>([]);
 
     function chooseMember(newMember: string) {
-        // Return a function that checks if the member is already in the team
-        // and adds them if they are not
         return function () {
             if (!team.includes(newMember)) {
-                // Use the correct pattern to update arrays in state
                 setTeam((prevTeam) => [...prevTeam, newMember]);
             }
         };
     }
 
     function clearTeam() {
-        // Correctly reset the team array to empty
         setTeam([]);
     }
 
